@@ -10,4 +10,8 @@ public class Board {
     public Board(Map<Field, Ship> board) {
         this.board = board;
     }
+
+    public Map<Field, Ship> getBoard() {
+        return board;
+    }
 }

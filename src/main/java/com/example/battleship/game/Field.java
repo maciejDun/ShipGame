@@ -6,4 +6,8 @@ public class Field {
     public Field(String position) {
         this.position = position;
     }
+
+    public String getPosition() {
+        return position;
+    }
 }

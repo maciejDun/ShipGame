@@ -12,4 +12,10 @@ public class ShipPart {
     public boolean isHit() {
         return isHit;
     }
+
+    public Field getPosition() {
+        return position;
+    }
 }
+
+

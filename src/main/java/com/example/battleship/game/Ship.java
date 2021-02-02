@@ -2,7 +2,7 @@ package com.example.battleship.game;
 
 import java.util.List;
 
-public class Ship {
+public abstract class Ship {
     private ShipType shipType;
     private boolean isSunken;
     private List<ShipPart> shipParts;
@@ -12,4 +12,17 @@ public class Ship {
         this.isSunken = false;
         this.shipParts = shipParts;
     }
+
+    public ShipType getShipType() {
+        return shipType;
+    }
+
+    public boolean isSunken() {
+        return isSunken;
+    }
+
+    public List<ShipPart> getShipParts() {
+        return shipParts;
+    }
+    abstract Field getShipField(int i);
 }
