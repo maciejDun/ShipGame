@@ -25,4 +25,14 @@ public abstract class Ship {
         return shipParts;
     }
     abstract Field getShipField(int i);
+
+    public boolean isHit(ShipPart shipPart){
+        return shipPart.isHit();
+    }
+//    public ShipPart getShipPart(Field field){
+//        return this.shipParts.get(shipParts.indexOf(field));
+//    }
+//    public boolean isHit(Field field){
+//        return this.shipParts.get(this.shipParts.indexOf(shipParts.)).isHit();
+//    }
 }

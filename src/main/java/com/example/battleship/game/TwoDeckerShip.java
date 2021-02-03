@@ -10,6 +10,8 @@ public class TwoDeckerShip extends Ship {
 
     @Override
     Field getShipField(int i) {
-        return super.getShipParts().get(i).getPosition();
+        if (i < 0 || i > 1) return null;
+        return getShipParts().get(i).getPosition();
     }
+
 }

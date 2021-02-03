@@ -11,4 +11,11 @@ public class Player {
         this.board = board;
         this.playerScore = 0;
     }
+
+    public String getUsername() {
+        return username;
+    }
+    public boolean shot(String field){
+        return false;
+    }
 }

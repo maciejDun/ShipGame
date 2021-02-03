@@ -12,7 +12,6 @@ public class OneDeckerShip extends Ship {
     @Override
     Field getShipField(int i) {
         if (i != 0) return null;
-
         return super.getShipParts().get(i).getPosition();
     }
 }
