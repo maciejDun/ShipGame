@@ -20,7 +20,7 @@ public class BattleshipApplication {
         GameService gameService = new GameService();
         gameService.createGame("Mac", "ShipGame");
         gameService.joinGame("Tim", "ShipGame");
-
+        System.out.println(gameService.shoot("A1", "ShipGame"));
 
 
 

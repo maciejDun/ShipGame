@@ -21,4 +21,11 @@ public class Game {
     public String getGameName() {
         return gameName;
     }
+
+    public boolean shootToPlayer1(String position){
+        Field field = new Field(position);
+        if(this.player1.getBoard().containsKey(field)) return true;
+        return false;
+    }
+
 }

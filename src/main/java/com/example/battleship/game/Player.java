@@ -1,9 +1,10 @@
 package com.example.battleship.game;
 
+import java.util.Map;
+
 public class Player {
     private String username;
     private int playerScore;
-
     private Board board;
 
     public Player(String username, Board board) {
@@ -15,7 +16,15 @@ public class Player {
     public String getUsername() {
         return username;
     }
-    public boolean shot(String field){
-        return false;
+    public void addPlayerScore(){
+        playerScore++;
+    }
+
+    public int getPlayerScore() {
+        return playerScore;
+    }
+
+    public Map<Field, Ship> getBoard() {
+        return board.getBoard();
     }
 }

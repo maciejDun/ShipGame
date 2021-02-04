@@ -5,6 +5,7 @@ import java.util.Map;
 
 public class BoardService {
 
+
     public static Board initPlayer1Board(){
         Field oneDeckerField1 = new Field("A1");
 
@@ -120,9 +121,6 @@ public class BoardService {
                 fourDeckerField4, fourDeckerShip));
         System.out.println("Initialized Player2 board!");
         return board;
-
-
-
 //        OneDeckerShip oneDeckerShip = new OneDeckerShip(List.of(new ShipPart(new Field("J10"))));
 //
 //        TwoDeckerShip twoDeckerShip = new TwoDeckerShip(List.of(new ShipPart(new Field("G9")),

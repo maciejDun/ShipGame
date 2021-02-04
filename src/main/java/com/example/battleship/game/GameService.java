@@ -20,6 +20,9 @@ public class GameService {
         return mapOfGames.get(gameName).addPlayer2(player2);
 
     }
+    public boolean shoot(String position, String gameName){
+        return mapOfGames.get(gameName).shootToPlayer1(position);
+    }
 
 
 
