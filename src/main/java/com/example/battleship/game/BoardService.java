@@ -75,9 +75,9 @@ public class BoardService {
         Field threeDeckerField3 = new Field("D10");
 
         Field fourDeckerField1 = new Field("A1");
-        Field fourDeckerField2 = new Field("B2");
-        Field fourDeckerField3 = new Field("C3");
-        Field fourDeckerField4 = new Field("D4");
+        Field fourDeckerField2 = new Field("B1");
+        Field fourDeckerField3 = new Field("C1");
+        Field fourDeckerField4 = new Field("D1");
 
         ShipPart oneDeckerShipPart1 = new ShipPart(oneDeckerField1);
 

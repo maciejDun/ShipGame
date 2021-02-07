@@ -21,16 +21,26 @@ public abstract class Ship {
     public boolean isSunken() {
         return isSunken;
     }
+    public boolean checkIfSunken(){
+        for (ShipPart shipPart : shipParts.values()){
+            if (!shipPart.isHit()) return false;
+        }
+        this.isSunken = true;
+        return true;
+    }
+
+
 
     public Map<Field, ShipPart> getShipParts() {
         return shipParts;
     }
     abstract Field getShipField(int i);
 
-    public boolean isHit(ShipPart shipPart){
-        return shipPart.isHit();
+    public boolean isHit(Field field){
+        return  this.shipParts.get(field).isHit();
     }
     public void hit(Field field){
         this.shipParts.get(field).hit();
+        checkIfSunken();
     }
 }
