@@ -100,7 +100,7 @@ public class Game {
     }
 
     // check now decrementing points, because now the points are not decrementing when you hit the same part of ship, also the placement of
-    // print is wrong
+    // print is wrong, also encapsulation is something to think about
 
 
 
