@@ -36,20 +36,20 @@ public class BoardService {
         ShipPart fourDeckerShipPart4 = new ShipPart(fourDeckerField4);
 
 
-    OneDeckerShip oneDeckerShip = new OneDeckerShip(List.of(oneDeckerShipPart1));
+    OneDeckerShip oneDeckerShip = new OneDeckerShip(Map.of(oneDeckerField1, oneDeckerShipPart1));
 
 
-    TwoDeckerShip twoDeckerShip = new TwoDeckerShip(List.of(twoDeckerShipPart1,
-                                                            twoDeckerShipPart2));
+    TwoDeckerShip twoDeckerShip = new TwoDeckerShip(Map.of(twoDeckerField1, twoDeckerShipPart1,
+                                                           twoDeckerField2, twoDeckerShipPart2));
 
-    ThreeDeckerShip threeDeckerShip = new ThreeDeckerShip(List.of(threeDeckerShipPart1,
-                                                                  threeDeckerShipPart2,
-                                                                  threeDeckerShipPart3));
+    ThreeDeckerShip threeDeckerShip = new ThreeDeckerShip(Map.of(threeDeckerField1, threeDeckerShipPart1,
+                                                                 threeDeckerField2, threeDeckerShipPart2,
+                                                                 threeDeckerField3, threeDeckerShipPart3));
 
-    FourDeckerShip fourDeckerShip = new FourDeckerShip(List.of(fourDeckerShipPart1,
-                                                               fourDeckerShipPart2,
-                                                               fourDeckerShipPart3,
-                                                               fourDeckerShipPart4));
+    FourDeckerShip fourDeckerShip = new FourDeckerShip(Map.of(fourDeckerField1, fourDeckerShipPart1,
+                                                              fourDeckerField2, fourDeckerShipPart2,
+                                                              fourDeckerField3, fourDeckerShipPart3,
+                                                              fourDeckerField4, fourDeckerShipPart4));
 
     Board board = new Board(Map.of(oneDeckerField1, oneDeckerShip,
                                    twoDeckerField1, twoDeckerShip,
@@ -94,20 +94,20 @@ public class BoardService {
         ShipPart fourDeckerShipPart4 = new ShipPart(fourDeckerField4);
 
 
-        OneDeckerShip oneDeckerShip = new OneDeckerShip(List.of(oneDeckerShipPart1));
+        OneDeckerShip oneDeckerShip = new OneDeckerShip(Map.of(oneDeckerField1, oneDeckerShipPart1));
 
 
-        TwoDeckerShip twoDeckerShip = new TwoDeckerShip(List.of(twoDeckerShipPart1,
-                twoDeckerShipPart2));
+        TwoDeckerShip twoDeckerShip = new TwoDeckerShip(Map.of(twoDeckerField1, twoDeckerShipPart1,
+                                                               twoDeckerField2, twoDeckerShipPart2));
 
-        ThreeDeckerShip threeDeckerShip = new ThreeDeckerShip(List.of(threeDeckerShipPart1,
-                threeDeckerShipPart2,
-                threeDeckerShipPart3));
+        ThreeDeckerShip threeDeckerShip = new ThreeDeckerShip(Map.of(threeDeckerField1, threeDeckerShipPart1,
+                                                                     threeDeckerField2, threeDeckerShipPart2,
+                                                                     threeDeckerField3, threeDeckerShipPart3));
 
-        FourDeckerShip fourDeckerShip = new FourDeckerShip(List.of(fourDeckerShipPart1,
-                fourDeckerShipPart2,
-                fourDeckerShipPart3,
-                fourDeckerShipPart4));
+        FourDeckerShip fourDeckerShip = new FourDeckerShip(Map.of(fourDeckerField1, fourDeckerShipPart1,
+                fourDeckerField2, fourDeckerShipPart2,
+                fourDeckerField3, fourDeckerShipPart3,
+                fourDeckerField4, fourDeckerShipPart4));
 
         Board board = new Board(Map.of(oneDeckerField1, oneDeckerShip,
                 twoDeckerField1, twoDeckerShip,

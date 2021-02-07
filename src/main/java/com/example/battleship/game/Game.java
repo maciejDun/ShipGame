@@ -22,10 +22,22 @@ public class Game {
         return gameName;
     }
 
-    public boolean shootToPlayer1(String position){
+    public boolean shoot(String position, String playerName){
         Field field = new Field(position);
-        if(this.player1.getBoard().containsKey(field)) return true;
+        if (playerName.equals(player1.getUsername())) {
+            if (this.player1.getBoard().containsKey(field)){
+                return true;
+            }
+        } else {
+            if (this.player2.getBoard().containsKey(field)) {
+                return true;
+            }
+        }
         return false;
     }
+//    public void hitShip(Player player1, Field field){
+//        player1.getBoard().get(field).hit();
+//    }
+
 
 }

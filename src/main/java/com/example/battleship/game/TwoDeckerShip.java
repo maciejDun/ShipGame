@@ -1,10 +1,11 @@
 package com.example.battleship.game;
 
 import java.util.List;
+import java.util.Map;
 
 public class TwoDeckerShip extends Ship {
 
-    public TwoDeckerShip(List<ShipPart> shipParts) {
+    public TwoDeckerShip(Map<Field, ShipPart> shipParts) {
         super(ShipType.TWO_DECKER, shipParts);
     }
 
