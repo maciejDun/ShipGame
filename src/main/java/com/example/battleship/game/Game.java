@@ -35,8 +35,7 @@ public class Game {
                     this.player2.addPlayerScore();
                     checkAllSunkenShips(targetPlayer);
                     return true;
-                }
-
+                } else this.player2.decrementPlayerScore();
             } else {
                 System.out.println("You missed...... try again!");
                 this.player2.decrementPlayerScore();
@@ -48,10 +47,10 @@ public class Game {
                     this.player1.addPlayerScore();
                     checkAllSunkenShips(targetPlayer);
                     return true;
-                }
+                } else this.player1.decrementPlayerScore();
             } else {
-                targetPlayer.decrementPlayerScore();
                 System.out.println("You missed...... try again!");
+                this.player1.decrementPlayerScore();
             }
         }
         return false;
@@ -87,20 +86,24 @@ public class Game {
         }
     }
     public void gameOver(){
-        System.out.println("**************");
+        System.out.println("XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX");
         System.out.println("Game is over");
         System.out.println("Player: " + this.player1.getUsername() + " score: " + player1.getPlayerScore());
         System.out.println("Player: " + this.player2.getUsername() + " score: " + player2.getPlayerScore());
-        if (!player1.getIsLost()) {
+        if (player1.getIsLost()) {
+            System.out.println("Player: " + this.player2.getUsername() + " have won!!!");
+        } else if (player2.getIsLost()) {
+            System.out.println("Player: " + this.player1.getUsername() + " have won!!!");
+        } else if (player1.getPlayerScore() > player2.getPlayerScore()) {
+            System.out.println("Player: " + this.player1.getUsername() + " have won!!!");
+        } else if (player2.getPlayerScore() > player1.getPlayerScore()){
             System.out.println("Player: " + this.player2.getUsername() + " have won!!!");
         } else {
-            System.out.println("Player: " + this.player1.getUsername() + " have won!!!");
+            System.out.println("There is a draw, no one have won!!!");
         }
         this.gameOver = true;
     }
 
-    // check now decrementing points, because now the points are not decrementing when you hit the same part of ship, also the placement of
-    // print is wrong, also encapsulation is something to think about
 
 
 

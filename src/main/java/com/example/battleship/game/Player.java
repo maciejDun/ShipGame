@@ -11,8 +11,8 @@ public class Player {
     public Player(String username, Board board) {
         this.username = username;
         this.board = board;
-        this.playerScore = 0;
-        this.isLost = true;
+        this.playerScore = 10;
+        this.isLost = false;
     }
 
     public String getUsername() {
@@ -21,12 +21,14 @@ public class Player {
     public void addPlayerScore(){
         System.out.println("Adding 10 points to " + this.username + " account");
         playerScore += 10;
+        System.out.println(this.username + " have " + this.playerScore + " points");
     }
     public void decrementPlayerScore(){
         if (this.playerScore > 0) {
-            System.out.println("Decrementing player: " + this.username + " score by 1 point");
+            System.out.println("***Decrementing player: " + this.username + " score by 1 point");
             playerScore--;
         }
+        System.out.println(this.username + " have " + this.playerScore + " points");
     }
 
     public int getPlayerScore() {
