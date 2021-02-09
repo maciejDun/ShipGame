@@ -27,6 +27,4 @@ public class GameService {
         mapOfGames.get(gameName).gameOver();
     }
 
-
-
 }

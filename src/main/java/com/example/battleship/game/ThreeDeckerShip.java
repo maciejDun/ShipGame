@@ -8,9 +8,5 @@ public class ThreeDeckerShip extends Ship{
         super(ShipType.THREE_DECKER, shipParts);
     }
 
-    @Override
-    Field getShipField(int i) {
-        if (i < 0 || i > 2) return null;
-        return getShipParts().get(i).getPosition();
-    }
 }
+

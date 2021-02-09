@@ -13,13 +13,11 @@ public class ShipPart {
         return isHit;
     }
 
-    public Field getPosition() {
-        return position;
-    }
     public void hit(){
         this.isHit = true;
     }
 
 }
+
 
 

@@ -55,7 +55,7 @@ public class Game {
         }
         return false;
     }
-    public boolean hitShip(Field field, Player player){
+    private boolean hitShip(Field field, Player player){
         Ship ship = player.getBoard().get(field);
         if (!ship.isHit(field)) {
             ship.hit(field);
@@ -78,7 +78,7 @@ public class Game {
         }
         return false;
     }
-    public void checkAllSunkenShips(Player player){
+    private void checkAllSunkenShips(Player player){
         if (player.checkAllSunkenShips()){
             System.out.println("Player: " + player.getUsername() + " have no ships left on his board!!!!");
             player.setIsLost();
@@ -103,10 +103,4 @@ public class Game {
         }
         this.gameOver = true;
     }
-
-
-
-
-
-
 }

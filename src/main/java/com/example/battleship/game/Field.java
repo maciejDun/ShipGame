@@ -27,3 +27,4 @@ public class Field {
         return this.position.hashCode() * 31;
     }
 }
+

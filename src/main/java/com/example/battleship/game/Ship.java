@@ -29,13 +29,6 @@ public abstract class Ship {
         return true;
     }
 
-
-
-    public Map<Field, ShipPart> getShipParts() {
-        return shipParts;
-    }
-    abstract Field getShipField(int i);
-
     public boolean isHit(Field field){
         return  this.shipParts.get(field).isHit();
     }
@@ -44,3 +37,4 @@ public abstract class Ship {
         checkIfSunken();
     }
 }
+

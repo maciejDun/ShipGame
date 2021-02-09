@@ -121,31 +121,6 @@ public class BoardService {
                 fourDeckerField4, fourDeckerShip));
         System.out.println("Initialized Player2 board!");
         return board;
-//        OneDeckerShip oneDeckerShip = new OneDeckerShip(List.of(new ShipPart(new Field("J10"))));
-//
-//        TwoDeckerShip twoDeckerShip = new TwoDeckerShip(List.of(new ShipPart(new Field("G9")),
-//                new ShipPart(new Field("G10"))));
-//
-//        ThreeDeckerShip threeDeckerShip = new ThreeDeckerShip(List.of(new ShipPart(new Field("D8")),
-//                new ShipPart(new Field("D9")),
-//                new ShipPart(new Field("D10"))));
-//
-//        FourDeckerShip fourDeckerShip = new FourDeckerShip(List.of(new ShipPart(new Field("A1")),
-//                new ShipPart(new Field("B1")),
-//                new ShipPart(new Field("C1")),
-//                new ShipPart(new Field("D1"))));
-//
-//        Board board = new Board(Map.of(oneDeckerShip.getShipField(0), oneDeckerShip,
-//                twoDeckerShip.getShipField(0), twoDeckerShip,
-//                twoDeckerShip.getShipField(1), twoDeckerShip,
-//                threeDeckerShip.getShipField(0), threeDeckerShip,
-//                threeDeckerShip.getShipField(1), threeDeckerShip,
-//                threeDeckerShip.getShipField(2), threeDeckerShip,
-//                fourDeckerShip.getShipField(0), fourDeckerShip,
-//                fourDeckerShip.getShipField(1), fourDeckerShip,
-//                fourDeckerShip.getShipField(2), fourDeckerShip,
-//                fourDeckerShip.getShipField(3), fourDeckerShip));
-//        System.out.println();
-//        return board;
     }
 }
+
