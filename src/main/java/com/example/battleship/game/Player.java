@@ -1,11 +1,16 @@
 package com.example.battleship.game;
 
+import lombok.Getter;
+
 import java.util.Map;
 
-public class Player {
-    private String username;
+
+public final class Player {
+    @Getter
+    private final String username;
+    @Getter
     private int playerScore;
-    private Board board;
+    private final Board board;
     private boolean isLost;
 
     public Player(String username, Board board) {
@@ -15,9 +20,6 @@ public class Player {
         this.isLost = false;
     }
 
-    public String getUsername() {
-        return username;
-    }
     public void addPlayerScore(){
         System.out.println("Adding 10 points to " + this.username + " account");
         playerScore += 10;
@@ -31,18 +33,16 @@ public class Player {
         System.out.println(this.username + " have " + this.playerScore + " points");
     }
 
-    public int getPlayerScore() {
-        return playerScore;
-    }
-
     public Map<Field, Ship> getBoard() {
+        board.isThereAliveShips();
         return board.getBoard();
+
     }
 
     public boolean checkAllSunkenShips(){
-        return this.board.checkAllSunkenShips();
+        return this.board.areAllShipsSunken();
     }
-    public void setIsLost(){
+    public void isLost(){
         this.isLost = true;
     }
 
@@ -50,3 +50,4 @@ public class Player {
         return isLost;
     }
 }
+

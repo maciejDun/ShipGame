@@ -1,17 +1,18 @@
 package com.example.battleship.game;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
 public abstract class Ship {
-    private ShipType shipType;
+    private final ShipType shipType;
     private boolean isSunken;
-    private Map<Field, ShipPart> shipParts;
+    private final Map<Field, ShipPart> shipParts;
 
     public Ship(ShipType shipType, Map<Field, ShipPart> shipParts) {
         this.shipType = shipType;
         this.isSunken = false;
-        this.shipParts = shipParts;
+        this.shipParts = Collections.unmodifiableMap(shipParts);
     }
 
     public ShipType getShipType() {
@@ -29,13 +30,6 @@ public abstract class Ship {
         return true;
     }
 
-
-
-    public Map<Field, ShipPart> getShipParts() {
-        return shipParts;
-    }
-    abstract Field getShipField(int i);
-
     public boolean isHit(Field field){
         return  this.shipParts.get(field).isHit();
     }
@@ -44,3 +38,4 @@ public abstract class Ship {
         checkIfSunken();
     }
 }
+

@@ -1,9 +1,9 @@
 package com.example.battleship.game;
 
-public class Game {
+public final class Game {
     private Player player1;
     private Player player2;
-    private String gameName;
+    private final String gameName;
     private boolean gameOver;
 
 
@@ -25,7 +25,7 @@ public class Game {
     }
 
     public boolean shoot(String position, String playerName){
-        Field field = new Field(position.toUpperCase());
+        Field field = Field.createField(position.toUpperCase());
         if (validateName(playerName)) return false;
         System.out.println("You are shooting to " + playerName + " ......");
         if (playerName.equals(player1.getUsername())) {
@@ -55,7 +55,7 @@ public class Game {
         }
         return false;
     }
-    public boolean hitShip(Field field, Player player){
+    private boolean hitShip(Field field, Player player){
         Ship ship = player.getBoard().get(field);
         if (!ship.isHit(field)) {
             ship.hit(field);
@@ -78,10 +78,10 @@ public class Game {
         }
         return false;
     }
-    public void checkAllSunkenShips(Player player){
+    private void checkAllSunkenShips(Player player){
         if (player.checkAllSunkenShips()){
             System.out.println("Player: " + player.getUsername() + " have no ships left on his board!!!!");
-            player.setIsLost();
+            player.isLost();
             gameOver();
         }
     }
@@ -103,10 +103,4 @@ public class Game {
         }
         this.gameOver = true;
     }
-
-
-
-
-
-
 }

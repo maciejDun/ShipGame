@@ -1,8 +1,8 @@
 package com.example.battleship.game;
 
-public class ShipPart {
+public final class ShipPart {
     private boolean isHit;
-    private Field position;
+    private final Field position;
 
     public ShipPart(Field position) {
         this.isHit = false;
@@ -13,13 +13,11 @@ public class ShipPart {
         return isHit;
     }
 
-    public Field getPosition() {
-        return position;
-    }
     public void hit(){
         this.isHit = true;
     }
 
 }
+
 
 

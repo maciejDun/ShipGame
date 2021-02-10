@@ -1,16 +1,17 @@
 package com.example.battleship.game;
 
-import java.util.Objects;
+import lombok.Getter;
 
-public class Field {
-    private String position;
+@Getter
+public final class Field {
+    private final String position;
 
-    public Field(String position) {
+    private Field(String position) {
         this.position = position;
     }
 
-    public String getPosition() {
-        return position;
+    public static Field createField(String position){
+        return new Field(position);
     }
 
     @Override
@@ -27,3 +28,4 @@ public class Field {
         return this.position.hashCode() * 31;
     }
 }
+
