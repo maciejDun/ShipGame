@@ -1,28 +1,30 @@
 package com.example.battleship.game;
 
+import lombok.AccessLevel;
+import lombok.Getter;
+
+import java.util.Collections;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Board {
+@Getter
+public final class Board {
 
-    private Map<Field, Ship> board;
+    private final Map<Field, Ship> board;
     private boolean isThereAliveShips;
 
     public Board(Map<Field, Ship> board) {
-        this.board = board;
+        this.board = Collections.unmodifiableMap(board);
         this.isThereAliveShips = true;
     }
 
-    public Map<Field, Ship> getBoard() {
-        return board;
-    }
-
-    public boolean checkAllSunkenShips(){
+    public boolean areAllShipsSunken(){
         for (Ship ship : board.values()){
             if (!ship.isSunken()) return false;
         }
         this.isThereAliveShips = false;
         return true;
     }
+
 }
 

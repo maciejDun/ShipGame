@@ -11,11 +11,7 @@ public class BattleshipApplication {
 
     public static void main(String[] args) {
 //        SpringApplication.run(BattleshipApplication.class, args);
-
-//        BoardService boardService = new BoardService();
-//        Board board = boardService.initPlayer1Board();
-//        boardService.initPlayer2Board();
-//        System.out.println();
+        
 
         GameService gameService = new GameService();
         gameService.createGame("Mac", "ShipGame");

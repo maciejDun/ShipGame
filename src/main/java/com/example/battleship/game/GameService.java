@@ -3,7 +3,7 @@ package com.example.battleship.game;
 import java.util.HashMap;
 import java.util.Map;
 
-public class GameService {
+public final class GameService {
 
     public static Map<String, Game> mapOfGames = new HashMap<>();
 
