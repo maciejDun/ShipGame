@@ -1,11 +1,15 @@
 package com.example.battleship.game;
 
+import lombok.Getter;
+
 import java.util.Collections;
 import java.util.List;
 import java.util.Map;
 
 public abstract class Ship {
+    @Getter
     private final ShipType shipType;
+    @Getter
     private boolean isSunken;
     private final Map<Field, ShipPart> shipParts;
 
@@ -15,27 +19,21 @@ public abstract class Ship {
         this.shipParts = Collections.unmodifiableMap(shipParts);
     }
 
-    public ShipType getShipType() {
-        return shipType;
+    public boolean isHit(Field field){
+        return  this.shipParts.get(field).isHit();
     }
 
-    public boolean isSunken() {
-        return isSunken;
+    public void hit(Field field){
+        this.shipParts.get(field).hit();
+        checkIfSunken();
     }
-    public boolean checkIfSunken(){
+
+    private boolean checkIfSunken(){
         for (ShipPart shipPart : shipParts.values()){
             if (!shipPart.isHit()) return false;
         }
         this.isSunken = true;
         return true;
-    }
-
-    public boolean isHit(Field field){
-        return  this.shipParts.get(field).isHit();
-    }
-    public void hit(Field field){
-        this.shipParts.get(field).hit();
-        checkIfSunken();
     }
 }
 

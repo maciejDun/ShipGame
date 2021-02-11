@@ -8,7 +8,6 @@ import java.util.Map;
 @Slf4j
 public final class BoardService {
 
-
     public static Board initPlayer1Board() {
         Field oneDeckerField1 = Field.createField("A1");
 
@@ -38,9 +37,7 @@ public final class BoardService {
         ShipPart fourDeckerShipPart3 = new ShipPart(fourDeckerField3);
         ShipPart fourDeckerShipPart4 = new ShipPart(fourDeckerField4);
 
-
         OneDeckerShip oneDeckerShip = new OneDeckerShip(Map.of(oneDeckerField1, oneDeckerShipPart1));
-
 
         TwoDeckerShip twoDeckerShip = new TwoDeckerShip(Map.of(twoDeckerField1, twoDeckerShipPart1,
                 twoDeckerField2, twoDeckerShipPart2));
@@ -97,9 +94,7 @@ public final class BoardService {
         ShipPart fourDeckerShipPart3 = new ShipPart(fourDeckerField3);
         ShipPart fourDeckerShipPart4 = new ShipPart(fourDeckerField4);
 
-
         OneDeckerShip oneDeckerShip = new OneDeckerShip(Map.of(oneDeckerField1, oneDeckerShipPart1));
-
 
         TwoDeckerShip twoDeckerShip = new TwoDeckerShip(Map.of(twoDeckerField1, twoDeckerShipPart1,
                 twoDeckerField2, twoDeckerShipPart2));
