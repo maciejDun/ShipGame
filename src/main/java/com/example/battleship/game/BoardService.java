@@ -6,7 +6,7 @@ import lombok.extern.slf4j.Slf4j;
 import java.util.Map;
 
 @Slf4j
-public final class BoardService {
+public class BoardService {
 
     public static Board initPlayer1Board() {
         Field oneDeckerField1 = Field.createField("A1");

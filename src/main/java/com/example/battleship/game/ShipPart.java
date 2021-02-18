@@ -2,7 +2,7 @@ package com.example.battleship.game;
 
 import lombok.Getter;
 
-public final class ShipPart {
+public class ShipPart {
     @Getter
     private boolean isHit;
     private final Field position;

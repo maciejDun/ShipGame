@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Getter
-public final class Board {
+public class Board {
 
     private final Map<Field, Ship> board;
     private boolean isThereAliveShips;

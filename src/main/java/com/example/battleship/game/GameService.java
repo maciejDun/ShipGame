@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @Slf4j
-public final class GameService {
+public class GameService {
 
     public static Map<String, Game> mapOfGames = new HashMap<>();
 

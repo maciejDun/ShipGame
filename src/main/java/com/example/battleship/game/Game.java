@@ -4,7 +4,7 @@ import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 
 @Slf4j
-public final class Game {
+public class Game {
     private final Player player1;
     private Player player2;
     @Getter

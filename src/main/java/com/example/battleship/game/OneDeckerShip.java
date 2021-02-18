@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public final class OneDeckerShip extends Ship {
+public class OneDeckerShip extends Ship {
 
     public OneDeckerShip(Map<Field, ShipPart> shipParts) {
         super(ShipType.ONE_DECKER, shipParts);

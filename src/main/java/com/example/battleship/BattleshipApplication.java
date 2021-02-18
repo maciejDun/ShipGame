@@ -30,13 +30,6 @@ public class BattleshipApplication {
         gameService.shoot("D7", "ShipGame", "Tim");
         gameService.shoot("D9", "ShipGame", "Tim");
         gameService.shoot("D10", "ShipGame", "Tim");
-//        gameService.shoot("D10", "ShipGame", "Tim");
-//        gameService.shoot("D10", "ShipGame", "Tim");
-//        gameService.shoot("D10", "ShipGame", "Mac");
-//        gameService.shoot("A1", "ShipGame", "Mac");
-//        gameService.shoot("A1", "ShipGame", "Mac");
-//        gameService.shoot("D1", "ShipGame", "Mac");
-//        gameService.gameOver("ShipGame");
 
 
 
