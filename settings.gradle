@@ -3,3 +3,8 @@
  */
 
 rootProject.name = 'battleship'
+
+include 'battleship-application'
+include 'battleship-model'
+include 'battleship-service'
+
