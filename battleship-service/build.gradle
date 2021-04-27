@@ -1,13 +1,17 @@
+plugins {
+    id 'application'
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
 
 dependencies {
-    implementation 'org.springframework.boot:spring-boot-starter'
-    implementation 'org.springframework.boot:spring-boot-starter-validation'
-    implementation 'org.springframework:spring-tx'
     implementation project(':battleship-model')
+    annotationProcessor 'org.projectlombok:lombok:1.18.20'
 }
 
-jar {
-    enabled = false
-}
+
 
 
